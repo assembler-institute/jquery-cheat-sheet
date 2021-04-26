@@ -1,0 +1,405 @@
+:root {
+  --myYellow: #f6bd60;
+  --myLinen: #f7ede2;
+  --myPink: #f5cac3;
+  --myBlue: #84a59d;
+  --myRed: #f28482;
+  --backgroundColor: #2a2f35;
+  --backgroundColor: #24292e;
+  --darkAccent: #1f2428;
+  --grayAccent: #444d56;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  /* outline: 1px white solid; */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Header section ------------------------------------- */
+
+header {
+  background-color: var(--darkAccent);
+  font-family: "Lexend", sans-serif;
+  color: var(--myLinen);
+  padding: 0px 0.33rem;
+  height: fit-content;
+  height: -moz-fit-content;
+}
+.tab {
+  padding: 0.6rem;
+  background-color: var(--backgroundColor);
+  font-weight: lighter;
+  border-style: solid solid none solid;
+  border-color: rgba(0, 0, 0, 0.384);
+  border-width: 1px;
+  margin-top: 0.33rem;
+  display: inline-block;
+}
+
+/* Body section ------------------------------------- */
+body {
+  font-family: "Lexend", sans-serif;
+  background-color: var(--darkAccent);
+  color: var(--myLinen);
+  overflow: hidden;
+}
+html {
+  font-size: 14px;
+}
+main {
+  padding: 0px 0.33rem;
+  counter-reset: line;
+  overflow-x: hidden;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  justify-content: space-between;
+}
+/* IDE-like windows ----------------------------- */
+.terminal-window {
+  background: var(--backgroundColor);
+  padding: 0.33rem;
+  border: rgba(0, 0, 0, 0.384) 1px solid;
+  border-top: none;
+  height: fit-content;
+  height: -moz-fit-content;
+  width: 31vw;
+  margin-bottom: 0.8rem;
+}
+.terminal-highlight {
+  background-color: var(--grayAccent);
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.33rem;
+}
+/* IDE like pre-numbering ---------------------------------------- */
+pre {
+  font-family: "Fira Mono", monospace;
+  margin: 0.2rem auto;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  box-shadow: 0.1em 0.1em 0.5em rgba(0, 0, 0, 0.45);
+  line-height: 0;
+}
+pre span {
+  display: block;
+  line-height: 1.5rem;
+}
+.count {
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  transition: color 0.2s;
+  overflow: hidden;
+}
+.count:hover {
+  color: var(--myYellow);
+}
+.count::after {
+  content: "  <--";
+  opacity: 0;
+  color: var(--myYellow);
+}
+@keyframes terminalBar {
+  100% {
+    opacity: 1;
+  }
+}
+.count:hover::after {
+  display: inline-block;
+  animation-name: terminalBar;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(2, start);
+}
+.code-highlight {
+  background-color: var(--darkAccent);
+  line-height: 1.8rem;
+  text-align: center;
+  /*  font-weight: bold; */
+}
+pre span.count:before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  border-right: 1px solid #ddd;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  color: #888;
+  width: 1rem;
+  font-weight: 200;
+}
+
+/* Mac Console mock -------------------------------------  */
+.console {
+  padding: 0.7rem;
+  font-family: "Fira Mono", monospace;
+  width: calc(100% - 1.3rem);
+  height: 80vh;
+  background-color: #1e1e1e;
+  color: var(--myYellow);
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 0.33rem;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  border-top: 28px solid var(--myPink);
+}
+.console p {
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.console p::-webkit-scrollbar {
+  width: 0em;
+}
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.console p::before {
+  content: ">";
+}
+#console-text-input,
+code {
+  -webkit-touch-callout: text;
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+#console-text-input:after {
+  content: "_";
+  -webkit-animation: cursor-blink 1s linear 1s infinite;
+  animation: cursor-blink 1s linear 1s infinite;
+  width: 0.6rem;
+  height: 1.3rem;
+  margin-left: 1px;
+  background: #fec041;
+}
+.dots-container {
+  position: absolute;
+  top: -28px;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 15px;
+  z-index: inherit;
+}
+.dots-container .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 7px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+.dot {
+  z-index: inherit;
+}
+.dot:first-child {
+  background-color: var(--myRed);
+}
+
+.dot:not(:first-child):not(:last-child) {
+  background-color: var(--myYellow);
+}
+
+.dot:last-child {
+  background-color: var(--myBlue);
+}
+.tryIt {
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s;
+  color: var(--myRed);
+}
+.tryIt:hover {
+  transform: translateX(0.7rem);
+}
+/* General use style ------------------------------ */
+.hide {
+  display: none;
+}
+
+/* Try It! Modal -----------------------------------------------*/
+.modal-background {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.4s, background-color 0.4s 0.2s,
+    backdrop-filter 0.8s 0.2s;
+  opacity: 1;
+  backdrop-filter: blur(3px);
+}
+
+.hidden {
+  height: 0px !important;
+  overflow: hidden;
+  opacity: 0;
+  backdrop-filter: blur(0px);
+  transition: opacity 0.2s, backdrop-filter 0.2s, background-color 0.2s,
+    opacity 0.2s, height 0s 0.4s;
+  background-color: rgba(255, 255, 255, 0);
+}
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  width: -moz-fit-content;
+  height: fit-content;
+  height: -moz-fit-content;
+  background-color: var(--backgroundColor);
+  color: var(--myPink);
+  margin: 20vh auto;
+  padding: 1rem;
+  border: 1px solid var(--darkestGray);
+  border-radius: 0.33rem;
+  position: relative;
+  z-index: 2;
+  border-top: 28px solid var(--myPink);
+}
+.two-columns {
+  width: 500px;
+}
+.two-columns > * {
+  margin: 0.7rem 0;
+}
+.flex-column {
+  display: flex;
+  flex-direction: row;
+}
+.demo {
+  height: 14.3rem;
+  width: 21.5rem;
+  position: relative;
+}
+.demo-code {
+  background-color: var(--darkAccent);
+  padding: 0.5rem;
+  height: 10.7rem;
+  width: 90%;
+}
+code {
+  font-family: "Fira Mono", monospace;
+  word-wrap: break-word;
+}
+.mid-boxes {
+  height: 80%;
+  width: 80%;
+  outline: var(--myPink) 1px solid;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-justify: end;
+  font-weight: lighter;
+  transition: all 0.5s ease-in-out;
+}
+.brother-boxes {
+  width: 20%;
+  height: 90%;
+  outline: var(--myPink) 1px solid;
+  display: inline-block;
+  font-weight: lighter;
+}
+.mid-opacity {
+  opacity: 0.5;
+}
+.half-opacity {
+  opacity: 0.5;
+}
+.test {
+  background-color: var(--myPink);
+  color: var(--darkAccent);
+  border: none;
+  padding: 0.3rem;
+  border-radius: 0.14rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.test:hover {
+  transform: scale(1.05);
+}
+.test:active {
+  transform: scale(0.95);
+}
+.test:disabled {
+  transform: none !important;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 12px;
+  }
+  .flex-row {
+    width: 100%;
+  }
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .terminal-window {
+    height: fit-content;
+    height: -moz-fit-content;
+    width: 100%;
+    margin-bottom: 0.8rem;
+    overflow-x: hidden;
+  }
+  .console-window {
+    order: -1;
+    height: fit-content;
+  }
+  .console {
+    height: 50vh;
+  }
+  .modal-content {
+    width: calc(100vw - 3rem);
+    margin: 5vh 0.5rem;
+  }
+  .flex-column {
+    flex-wrap: wrap;
+  }
+  .demo-code {
+    overflow: auto;
+    height: 12vh;
+  }
+  .demo {
+    height: 12vh;
+  }
+  .two-columns {
+    width: 95vw;
+  }
+  .modal-background {
+    height: 150vh;
+    width: 150vw;
+  }
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Cheat Sheet</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./assets/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./assets/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./assets/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./assets/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./assets/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./assets/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./assets/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./assets/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./assets/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <header>
+      <span class="tab">jquery-cheat-sheet.js</span>
+    </header>
+    <main>
+      <div class="flex-row">
+        <section class="terminal-window">
+          <h3 class="terminal-highlight">Selectors</h3>
+          <pre>
+          <span class="code-highlight">Get...</span>
+          <span class="count">Parent element</span>
+          <span class="count">Children collection</span>
+          <span class="count">Collection by class</span>
+          <span class="count">Element by Id</span>
+          <span class="count">Collection by class & attribute</span>
+        </pre>
+          <h3 class="terminal-highlight">Events</h3>
+          <pre>
+          <span class="code-highlight">HTML</span>
+          <span class="count">Document has been loaded</span>
+          <span class="code-highlight">Cursor</span>
+          <span class="count">Click</span>
+          <span class="count">Double click</span>
+          <span class="count">Cursor movement</span>
+          <span class="count">Mouse over</span>
+          <span class="code-highlight">Keyboard</span>
+          <span class="count">Keypress</span>
+          <span class="code-highlight">Images</span>
+          <span class="count">An image is loaded</span>
+          <span class="count">An image fails to load</span>
+          <span class="code-highlight">Data</span>
+          <span class="count">Form is submitted</span>
+          <span class="count">Input value change (select, checkbox, input)</span>
+          <span></span>
+        </pre>
+        </section>
+        <section class="terminal-window console-window">
+          <div class="console">
+            <div class="dots-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <p id="console-text-input"></p>
+          </div>
+        </section>
+        <section class="terminal-window">
+          <h3 class="terminal-highlight">Function</h3>
+          <pre>
+            <span class="code-highlight">HTML Elements</span>
+            <span class="count">Create HTML element</span>
+            <span class="count">Remove HTML element</span>
+            <span class="count">Clone HTML element</span>
+            <span class="code-highlight">DOM Manipulation</span>
+            <span class="count">Append HTML element</span>
+            <span class="count">Prepend HTML element</span>
+            <span class="count">Add after another</span>
+            <span class="count">Add before another</span>
+            <span class="code-highlight">Classes</span>
+            <span class="count">Add class to an HTML element</span>
+            <span class="count">Remove class to an HTML element</span>
+            <span class="count">Toggle class to an HTML element</span>
+            <span class="code-highlight">Attributes</span>
+            <span class="count">Add a disabled attribute</span>
+            <span class="count">Remove a disabled attribute</span>
+            <span class="count">Set 'data-src' attribute</span>
+            <span class="count">Remove 'data-src' attribute</span>
+            <span class="count">Change href attribute</span>
+            <span class="code-highlight">Element display</span>
+            <span class="count">Hide HTML element on click</span>
+            <span class="count">Show HTML element on click</span>
+            <span class="count">Fade in an HTML element (jQuery)</span>
+            <span class="count">Fade out an HTML element (jQuery)</span>
+            <span class="count">Delayed animate after page load</span>
+            <span class="code-highlight">Functions</span>
+            <span class="count">Iterate collection of elements</span>
+            <span class="count">Get selected options of <i>select</i></span>
+            <span class="count">Get input value</span>
+            <span class="count">Remove multiple items of selector</span>
+          </pre>
+        </section>
+      </div>
+      <section class="modal-background hidden">
+        <div class="modal-content">
+          <div class="flex-column">
+            <div class="two-columns" id="modal1">
+              <h3>jQuery Code</h3>
+              <div class="demo-code">
+                <code id="code1"></code>
+              </div>
+              <h3>Demo</h3>
+              <div class="demo" id="demo1">
+                </div>
+            </div>
+            <div class="two-columns" id="modal2">
+              <h3>Vanilla JS Code</h3>
+              <div class="demo-code">
+                <code id="code2"></code>
+              </div>
+              <h3>Demo</h3>
+              <div class="demo" id="demo2"></div>
+          </div>
+          <div class="dots-container">
+            <div class="dot" id="close-modal"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="./assets/js/jquery-3.6.0.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/jqueryScript.js"></script>
+  <script src="./assets/js/vanillaScript.js"></script>
+</html>
