@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="module" src="vanilla.js"></script>
+    <script type="module" src="jquery.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;400;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,800&display=swap"
+        rel="stylesheet">
+    <title>JQuery | Cheat Sheet</title>
+</head>
+
+<body>
+    <h1>JQuery | Cheat Sheet</h1>
+    <div id="searchEngine">
+        <input id="searchInput" type="text" placeholder="Search">
+        <!--<button id="search"><img src="img/search.png" width="24px" height="24px"></button>-->
+    </div>
+    <main>
+        <div class="listContainer" id="divEventFunctions">
+            <h2>Event Functions</h2>
+            <div class="" id="eventFunctions"></div>
+        </div>
+        <div class="listContainer" id="divListFunctions">
+            <h2>List Functions</h2>
+            <div id="listFunctions"></div>
+        </div>
+        <div class="listContainer" id="divSelectFunctions">
+            <h2>Selectors</h2>
+            <div id="selectFunctions"></div>
+        </div>
+    </main>
+    <template class="templateModal">
+        <div id="backBlocked"></div>
+        <div id="modal">
+            <div id="modalTitle">
+                <div id="closeButton"><img src="img/close.png" width="24px" height="24px"></div>
+                <h3 id="itemTitle"></h3>
+            </div>
+            <div id="modalWrapper">
+                <div id="leftModalContent">
+                    <button id="jsButton" type="button" class="collapsible"><img src="img/js.png" width="36px" height="36px"><p>Java Script</p></button>
+                    <div class="content" id="jsCode">
+                        <p></p>
+                    </div>
+                    <button id="jqButton" type="button" class="collapsible"><img src="img/jquery.png" width="36px" height="36px"><p>JQuery</p></button>
+                    <div class="content" id="jqCode">
+                        <p></p>
+                    </div>
+                </div>
+                <div id="rightModalContent">
+                    <div id="runID">
+                        <p class="changeWeight">Si queremos que todo siga como está,</p>
+                        <p id="pId">es necesario que todo cambie.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="buttonContainer">
+                <button id="runCode">Run</button>
+            </div>
+        </div>
+    </template>
+    <template class="eventsElements">
+        <form id="eventsForm">
+            <img src="/img/develop.jpg">
+            <label>First name</label>
+            <input id="nameInput" type="text"/>
+            <label>Last name</label>
+            <input id="lastInput" type="text"/>
+            <select>
+                <option>Online course</option>
+                <option>Classroom course</option>
+            </select>
+            <ul>
+            </ul>
+            <label><input id="check" type="checkbox"/>I accept the privacy policy</label>
+            <button type="submit">Send</button>
+            <p></p>
+        </form>
+    </template>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</html>
