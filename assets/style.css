@@ -1,0 +1,79 @@
+body {
+  background-color: var(--bg);
+  justify-content: center;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  padding: 20px 40px;
+  border-bottom: 2px var(--pink) solid;
+}
+
+header > div {
+  font-size: 70px;
+}
+
+main {
+  width: 90%;
+  padding: 20px 40px;
+}
+
+h1 {
+  font-weight: 700;
+  margin: 20px 0px;
+}
+
+h1::before {
+  content: ">>> ";
+}
+
+button {
+  margin-bottom: 20px;
+  margin-left: 38px;
+  background-color: var(--btnGrey);
+  color: var(--green);
+  border-radius: 10px;
+  border: 3px var(--green) solid;
+  transition: none;
+  font-size: medium;
+  padding: 5px 10px;
+}
+
+button:hover {
+  border: 3px var(--pink) solid;
+}
+
+button:active {
+  background-color: var(--btnActive);
+  color: var(--green);
+  border: 3px var(--green) solid;
+  transform: translateY(1px);
+}
+
+p {
+  margin-bottom: 20px;
+  margin-left: 38px;
+}
+
+.code {
+  white-space: pre;
+  line-height: 1.5;
+  font-family: "Courier New", Courier, monospace;
+}
+
+input {
+  background-color: var(--bg);
+  margin-bottom: 20px;
+  margin-left: 38px;
+  border: none;
+  border-bottom: 2px var(--green) solid;
+  width: 20%;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 3px var(--pink) solid;
+  transform: translateY(3px);
+  width: 40%;
+}

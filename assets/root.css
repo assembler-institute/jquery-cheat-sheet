@@ -1,0 +1,162 @@
+/* RESET CSS ----------------------------- */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* END OF RESET CSS ------------------------- */
+
+/* MAIN VARIABLES FOR STYLES ------------------- */
+
+/* VARIABLES */
+:root {
+  --font: "Open Sans", sans-serif;
+  --font-display: "Open Sans", sans-serif;
+  --light: 300;
+  --regular: 400;
+  --semi-bold: 600;
+  --bold: 700;
+  --bg: #333333;
+  --header: #404040;
+  --btnGrey: #585858;
+  --btnActive: #7b7b7b;
+  --textDarkGray: #707070;
+  --textLightGray: #b0b0b0;
+  --pink: #c07d7d;
+  --red: #c94d4d;
+  --green: #b8cead;
+  --darkGreen: #49b162f1;
+  --blueTitle: #66aeaf;
+  --darkBlue: #3d989a;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  /* outline: 1px solid red !important; */
+  box-sizing: border-box;
+  cursor: default;
+  transition: 0.15s ease-out;
+  font-size: larger;
+  color: var(--pink);
+}
